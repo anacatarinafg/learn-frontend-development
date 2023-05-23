@@ -1,0 +1,36 @@
+{
+    "slideshow": [
+      { "id": 1, "title": "HTML" },
+      { "id": 2, "title": "CSS" },
+      { "id": 3, "title": "Javascript" }
+    ],
+    "pagination": [
+      {
+        "id": 1,
+        "slideId": 1,
+        "number": 1,
+        "title": "&lt;html/&gt;",
+        "example": "&lt;h1&gt;Hello world&lt;/h1&gt;",
+        "image": "",
+        "description": "HTML: The wizardry of the web. It transforms code into captivating pages, where text, images, and links unite. With HTML as your guide, you possess the sorcery to conjure immersive digital realms that leave an indelible mark on those who wander through them."
+      },
+      {
+        "id": 2,
+        "slideId": 2,
+        "number": 2,
+        "title": "/* css */",
+        "example": "body &#123; background-color: #D366EE &#125;",
+        "image": "",
+        "description": "CSS: The art of web enchantment. It weaves spells of style, color, and layout, transforming plain HTML into captivating visual experiences. With CSS, you become a design sorcerer, casting magic that captivates and delights users in the mesmerizing realm of the web."
+      },
+      {
+          "id": 3,
+          "slideId": 3,
+          "number": 3,
+          "title": "&lt;javascript/&gt;",
+          "example": "CONSOLE.LOG(“HELLO, WORLD”)",
+          "image": "",
+          "description": "JS: The mystical force behind web interactivity. It empowers you to create dynamic, responsive websites. With its enchanting spells of logic and event handling, JS brings interactivity to life, captivating users and unlocking endless possibilities in the digital realm."
+      }
+    ]
+  }

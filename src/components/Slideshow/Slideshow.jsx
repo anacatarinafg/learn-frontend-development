@@ -3,9 +3,9 @@ import { Link, useNavigate } from 'react-router-dom';
 import { BsFillCircleFill } from "react-icons/bs";
 import Navbar from "../../Navbar/Navbar";
 import "./slideshow.css";
-import "../slideshowALL.css";
 
 const Slideshow = () => {
+    const navigate = useNavigate();
     return (
         <>
             <Navbar />
