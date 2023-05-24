@@ -1,10 +1,10 @@
 import './App.css';
-import Slideshow from './components/Slideshow/Slideshow';
+import Test from './components/test';
 
 function App() {
   return (
     <div>
-      <Slideshow />
+      <Test />
     </div>
   );
 }
