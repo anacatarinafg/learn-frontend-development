@@ -56,14 +56,13 @@ body {
         justify-content: center;
         gap: 10px;
         padding: 5em;
-        z-index: 5;
 
         .slideshow__slide {
             width: 10px;
             height: 10px;
             border-radius: 50%;
             border: 1px solid #000000;
-            z-index: 5;
+            z-index: 5; /* if menu it's active, then we need to remove the z-index out of here */
         }
     }
 }

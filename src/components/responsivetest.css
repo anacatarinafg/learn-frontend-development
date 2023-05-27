@@ -24,26 +24,12 @@ body {
   font-family: "Roslindale", sans-serif;
 }
 
-h1.menu__title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 10vw;
-  font-weight: 400;
-  z-index: 0;
-}
-
 .navbar__overlay {
   position: absolute;
   width: 100vw;
   height: 100vh;
   top: 0;
   left: 0;
-  z-index: 0;
 }
 
 svg path {
@@ -60,7 +46,6 @@ svg path {
   justify-content: center;
   align-items: center;
   margin: 2em;
-  z-index: 2;
   cursor: pointer;
 }
 
@@ -97,7 +82,6 @@ svg path {
   height: 20px;
   z-index: 2;
 }
-
 #hamburger span {
   position: absolute;
   top: 50%;
@@ -108,7 +92,6 @@ svg path {
   background: var(--overlay-bg);
   transition: transform 0.25s;
 }
-
 #hamburger span::before {
   position: absolute;
   right: 0;
@@ -120,12 +103,10 @@ svg path {
   transform: translateY(-4px);
   transition: transform 0.25s;
 }
-
-#hamburger .active span {
+#hamburger.active span {
   transform: rotate(45deg);
 }
-
-#hamburger .active span:before {
+#hamburger.active span::before {
   top: unset;
   width: 24px;
   transform: rotate(-90deg);
@@ -134,16 +115,15 @@ svg path {
 .navbar__menu {
   position: fixed;
   top: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
+  left: 0;
   display: flex;
 }
-
 .navbar__menu > div {
   height: 100%;
   display: flex;
 }
-
 .navbar__menu a {
   position: relative;
   top: 120px;
@@ -151,7 +131,6 @@ svg path {
   text-decoration: none;
   color: var(--link-color);
 }
-
 .navbar__menu a span {
   font-size: 20px;
   margin-right: 2em;
@@ -160,7 +139,6 @@ svg path {
 .menu__item {
   position: relative;
 }
-
 .menu__item::after {
   content: "";
   position: absolute;
@@ -187,7 +165,6 @@ svg path {
   justify-content: center;
   align-items: center;
 }
-
 .menu__primary .menu__container .menu__wrapper {
   width: 100%;
   height: 100%;
@@ -195,7 +172,6 @@ svg path {
   flex-direction: column;
   justify-content: space-between;
 }
-
 .menu__primary a {
   font-size: 125px;
   text-transform: uppercase;
@@ -210,18 +186,15 @@ svg path {
   align-items: center;
   gap: 8em;
 }
-
 .menu__secondary .menu__item a {
   font-size: 36px;
 }
-
 .menu__secondary .menu__container .menu__wrapper:nth-child(1) {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
-
-.menu__primary .menu__container .menu__wrapper .menu__item:nth-child(1) a,
-.menu__primary .menu__container .menu__wrapper .menu__item:nth-child(3) a {
+.menu__secondary .menu__primary .menu__container .menu__wrapper .menu__item:nth-child(1) a,
+.menu__secondary .menu__primary .menu__container .menu__wrapper .menu__item:nth-child(3) a {
   margin-left: 1em;
 }/*# sourceMappingURL=responsivetest.css.map */
