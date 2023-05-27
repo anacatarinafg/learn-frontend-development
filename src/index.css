@@ -28,7 +28,7 @@ a {
   color: inherit;
 }
 body {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   font-family: "Archivo", sans-serif;
   color: #000;

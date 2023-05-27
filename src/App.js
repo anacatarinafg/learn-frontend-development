@@ -6,6 +6,7 @@ function App() {
   return (
     <div>
       <Responsivetest />
+      <Test />
     </div>
   );
 }

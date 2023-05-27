@@ -150,7 +150,6 @@ svg path {
   line-height: 70%;
   text-decoration: none;
   color: var(--link-color);
-  color: red;
 }
 
 .navbar__menu a span {
