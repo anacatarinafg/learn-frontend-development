@@ -40,6 +40,7 @@ body {
   border-radius: 25px;
   padding: 0.5em 1.5em;
   font-weight: 500;
+  z-index: 10;
 }
 .slideshow .slideshow__changeSlide {
   width: 100%;

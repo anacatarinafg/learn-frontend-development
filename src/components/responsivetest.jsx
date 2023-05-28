@@ -137,6 +137,8 @@ const Responsivetest = () => {
                     <path
                         ref={path}
                         d="M0 0 L100 0 L100 100 L0 100 Z"
+                        stroke="none"
+                        fill="#0a0a0a"
                         style={{ opacity: 0 }}
                     ></path>
                 </svg>
@@ -182,12 +184,6 @@ const Responsivetest = () => {
                             </div>
                             <div className="menu__item">
                                 <a href="">Contact</a>
-                                <div className="menu__item--revealer"></div>
-                            </div>
-                        </div>
-                        <div className="menu__wrapper">
-                            <div className="menu__item">
-                                <a href="">Credits</a>
                                 <div className="menu__item--revealer"></div>
                             </div>
                         </div>
