@@ -1,22 +1,35 @@
-:root {
-  --bg: #e5e3dc;
-  --link-color: #e2e2dc;
-  --overlay-bg: #0a0a0a;
-}
-
 @font-face {
-  src: url("./Roslindale_Web/fonts/Roslindale-DisplayCondensedSemiBold-Testing.woff")
-    format("woff");
+  src: url("./Roslindale_Web/fonts/Roslindale-DisplayCondensedSemiBold-Testing.woff") format("woff");
   font-family: "Roslindale";
   font-style: normal;
   font-weight: 500;
 }
+
 @font-face {
-  src: url("./Roslindale_Web/fonts/Roslindale-DisplayCondensedRegular-Testing.woff")
-    format("woff");
+  src: url("./Roslindale_Web/fonts/Roslindale-DisplayCondensedRegular-Testing.woff") format("woff");
   font-family: "Roslindale";
   font-style: normal;
   font-weight: 400;
+}
+
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+
+&:root {
+  --bg: #e5e3dc;
+  --link-color: #e2e2dc;
+  --overlay-bg: #0a0a0a;
 }
 
 * {
@@ -24,7 +37,12 @@
   padding: 0;
 }
 
-html,
+html {
+  width: 100%;
+  height: 100%;
+  font-family: "Roslindale", sans-serif;
+}
+
 body {
   width: 100%;
   height: 100%;
@@ -39,8 +57,10 @@ body {
   left: 0;
 }
 
-svg path {
-  fill: var(--overlay-bg);
+svg {
+  path {
+    fill: var(--overlay-bg);
+  }
 }
 
 #toggle-btn {
@@ -73,23 +93,12 @@ svg path {
   border-radius: 53% 47% 43% 57% / 51% 39% 61% 49%;
 }
 
-@keyframes morph {
-  0% {
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-  }
-  50% {
-    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
-  }
-  100% {
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-  }
-}
-
 #hamburger {
   position: relative;
   width: 20px;
   height: 20px;
   z-index: 2;
+
   span {
     position: absolute;
     top: 50%;
@@ -112,16 +121,16 @@ svg path {
       transition: transform 0.25s;
     }
   }
+}
 
-  &.active {
-    span {
-      transform: rotate(45deg);
+&.active {
+  span {
+    transform: rotate(45deg);
 
-      &::before {
-        top: unset;
-        width: 24px;
-        transform: rotate(-90deg);
-      }
+    &::before {
+      top: unset;
+      width: 24px;
+      transform: rotate(-90deg);
     }
   }
 }
@@ -134,22 +143,9 @@ svg path {
   left: 0;
   display: flex;
 
-  > div {
+  >div {
     height: 100%;
     display: flex;
-  }
-
-  a {
-    position: relative;
-    top: 120px;
-    line-height: 70%;
-    text-decoration: none;
-    color: var(--link-color);
-
-    span {
-      font-size: 20px;
-      margin-right: 2em;
-    }
   }
 }
 
@@ -176,6 +172,47 @@ svg path {
   justify-content: space-between;
 }
 
+.menu__secondary {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .menu__item a {
+    font-size: 36px;
+    flex: 1;
+
+    .menu__item a {
+      font-size: 36px;
+    }
+
+    .menu__primary {
+      flex: 1;
+
+      a {
+        font-size: 52px;
+      }
+    }
+  }
+}
+
+a {
+  position: relative;
+  top: 120px;
+  line-height: 70%;
+  text-decoration: none;
+  color: var(--link-color);
+
+  span {
+    font-size: 20px;
+    margin-right: 2em;
+    font-size: 125px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+}
+
 .menu__primary {
   flex: 3;
   display: flex;
@@ -191,25 +228,13 @@ svg path {
     justify-content: space-between;
   }
 
-  a {
-    font-size: 125px;
-    text-transform: uppercase;
-    font-weight: 500;
-  }
-  .menu__item:nth-child(2) a {
-    margin-left: 1em;
-  }
-}
-
-.menu__secondary {
-  flex: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  .menu__item a {
-    font-size: 36px;
+  .menu__item {
+    &:nth-child(2) {
+      a {
+        margin-left: 1em;
+        margin-left: 0;
+      }
+    }
   }
 }
 
@@ -219,9 +244,10 @@ svg path {
     flex-direction: column;
     justify-content: center;
 
-    > div {
+    >div {
       flex-direction: column;
     }
+
     a {
       position: relative;
       top: 120px;
@@ -233,22 +259,6 @@ svg path {
         font-size: 20px;
         margin-right: 1em;
       }
-    }
-  }
-  .menu__primary {
-    flex: 1;
-    a {
-      font-size: 52px;
-    }
-    .menu__item:nth-child(2) a {
-      margin-left: 0;
-    }
-  }
-  .menu__secondary {
-    flex: 1;
-
-    .menu__item a {
-      font-size: 36px;
     }
   }
 }

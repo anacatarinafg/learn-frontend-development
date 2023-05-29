@@ -8,12 +8,11 @@
   position: fixed;
   left: 2.5%;
 }
-.navbar .navbar__headline {
+.navbar__headline {
   font-size: 16px;
   padding: 0.5em 0;
   z-index: 5;
 }
-
 .navbar span {
   position: absolute;
   top: -2px;
