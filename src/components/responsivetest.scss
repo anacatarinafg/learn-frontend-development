@@ -26,20 +26,17 @@
 
 html,
 body {
-  width: 100vw;
-  height: 100vh;
-  background-color: var(--bg);
-  overflow: hidden;
+  width: 100%;
+  height: 100%;
   font-family: "Roslindale", sans-serif;
 }
 
 .navbar__overlay {
   position: absolute;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
-  // z-index: 2;
 }
 
 svg path {
@@ -56,7 +53,7 @@ svg path {
   justify-content: center;
   align-items: center;
   margin: 2em;
-  // z-index: 2;
+  z-index: 2;
   cursor: pointer;
 }
 
@@ -110,7 +107,7 @@ svg path {
       content: "";
       width: 18px;
       height: 1.25px;
-      background-color: var(--overlay-bg);
+      background-color: #e2e2dc;
       transform: translateY(-4px);
       transition: transform 0.25s;
     }
@@ -133,7 +130,7 @@ svg path {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   left: 0;
   display: flex;
 
@@ -213,5 +210,45 @@ svg path {
 
   .menu__item a {
     font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar__menu {
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+
+    > div {
+      flex-direction: column;
+    }
+    a {
+      position: relative;
+      top: 120px;
+      line-height: 70%;
+      text-decoration: none;
+      color: var(--link-color);
+
+      span {
+        font-size: 20px;
+        margin-right: 1em;
+      }
+    }
+  }
+  .menu__primary {
+    flex: 1;
+    a {
+      font-size: 52px;
+    }
+    .menu__item:nth-child(2) a {
+      margin-left: 0;
+    }
+  }
+  .menu__secondary {
+    flex: 1;
+
+    .menu__item a {
+      font-size: 36px;
+    }
   }
 }

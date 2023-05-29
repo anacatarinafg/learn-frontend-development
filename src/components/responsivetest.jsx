@@ -133,7 +133,7 @@ const Responsivetest = () => {
 
             {/* Svg overlay */}
             <div>
-                <svg className="navbar__overlay" viewBox="0 0 200 100">
+                <svg className="navbar__overlay" viewBox="100 200 200 100">
                     <path
                         ref={path}
                         d="M0 0 L100 0 L100 100 L0 100 Z"
