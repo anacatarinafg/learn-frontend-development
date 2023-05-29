@@ -63,8 +63,6 @@ const Responsivetest = () => {
             {
                 x: -40,
                 y: 40,
-                width: "140px",
-                height: "140px",
                 border: "1px solid #e2e2dc",
                 ease: power4,
             },
@@ -151,31 +149,26 @@ const Responsivetest = () => {
                         <div className="menu__wrapper">
                             <div className="menu__item">
                                 <a href="">
-                                    <span>I</span>Index
+                                    Index
                                 </a>
                                 <div className="menu__item--revealer"></div>
                             </div>
                             <div className="menu__item">
                                 <a href="">
-                                    <span>II</span>Resources
+                                    Resources
                                 </a>
                                 <div className="menu__item--revealer"></div>
                             </div>
                             <div className="menu__item">
                                 <a href="">
-                                    <span>III</span>Docs
+                                    Docs
                                 </a>
                                 <div className="menu__item--revealer"></div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="menu__secondary">
-                    <div className="menu__container">
-                        <div className="menu__wrapper">
                             <div className="menu__item">
-                                <a href="">Contact</a>
+                                <a href="">
+                                    Contact
+                                </a>
                                 <div className="menu__item--revealer"></div>
                             </div>
                         </div>
