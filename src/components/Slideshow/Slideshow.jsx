@@ -17,7 +17,7 @@ const Slideshow = () => {
                 <section className='slideshow__information'>
                     <h3 className='slideshow__hello'>&lt;h1&gt;Hello world&lt;/h1&gt;</h3>
                     <p className='slideshow__paragraph'>HTML: The wizardry of the web. It transforms code into captivating pages, where text, images, and links unite. With HTML as your guide, you possess the sorcery to conjure immersive digital realms that leave an indelible mark on those who wander through them.</p>
-                    <button className='slideshow__button' type='button'>docs</button>
+                    <button className='slideshow__button' type='button'><span>docs</span></button>
                 </section>
                 <section className='slideshow__changeSlide'>
                     <button className='slideshow__slide' type='button'></button>

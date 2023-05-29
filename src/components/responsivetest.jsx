@@ -157,13 +157,13 @@ const Responsivetest = () => {
                             </div>
                             <div className="menu__item">
                                 <a href="">
-                                    <span>II</span>Work
+                                    <span>II</span>Resources
                                 </a>
                                 <div className="menu__item--revealer"></div>
                             </div>
                             <div className="menu__item">
                                 <a href="">
-                                    <span>III</span>About
+                                    <span>III</span>Docs
                                 </a>
                                 <div className="menu__item--revealer"></div>
                             </div>
@@ -174,14 +174,6 @@ const Responsivetest = () => {
                 <div className="menu__secondary">
                     <div className="menu__container">
                         <div className="menu__wrapper">
-                            <div className="menu__item">
-                                <a href="">Speaker</a>
-                                <div className="menu__item--revealer"></div>
-                            </div>
-                            <div className="menu__item">
-                                <a href="">Blog</a>
-                                <div className="menu__item--revealer"></div>
-                            </div>
                             <div className="menu__item">
                                 <a href="">Contact</a>
                                 <div className="menu__item--revealer"></div>

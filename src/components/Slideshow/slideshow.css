@@ -1,11 +1,11 @@
 body {
-  width: 100%;
-  background-color: #7166EE;
+  background-color: #7166ee;
 }
 
 .slideshow {
   width: 95%;
   margin: auto;
+  padding: 3.7em 0;
 }
 .slideshow .slideshow__identificator {
   display: flex;
@@ -34,13 +34,16 @@ body {
 .slideshow .slideshow__information .slideshow__paragraph {
   width: 50%;
   font-weight: 500;
+  font-size: 18px;
 }
 .slideshow .slideshow__information .slideshow__button {
-  border: 1px solid #000000;
-  border-radius: 25px;
-  padding: 0.5em 1.5em;
+  border-top: 2px solid #0a0a0a;
+  border-bottom: 2px solid #0a0a0a;
+  font-size: 22px;
   font-weight: 500;
   z-index: 10;
+  text-transform: uppercase;
+  transition: 150ms;
 }
 .slideshow .slideshow__changeSlide {
   width: 100%;
@@ -54,10 +57,10 @@ body {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  border: 1px solid #000000;
+  border: 1px solid #0a0a0a;
   z-index: 5; /* if menu it's active, then we need to remove the z-index out of here */
 }
 
 .slideshow__slide.active {
-  background-color: #000000;
+  background-color: #0a0a0a;
 }/*# sourceMappingURL=slideshow.css.map */

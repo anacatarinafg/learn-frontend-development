@@ -3,11 +3,33 @@
   margin: auto;
   display: flex;
   justify-content: space-between;
-  border-top: 2px solid #000;
+  border-top: 2px solid #0a0a0a;
   margin-top: 20px;
+  position: fixed;
+  left: 2.5%;
 }
 .navbar .navbar__headline {
   font-size: 16px;
   padding: 0.5em 0;
   z-index: 5;
+}
+
+.navbar span {
+  position: absolute;
+  top: -2px;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #0a0a0a);
+  animation: navbarAnimation 5s infinite linear;
+}
+
+@keyframes navbarAnimation {
+  0% {
+    left: 2.5%;
+    transform: translate(-100%);
+  }
+  100% {
+    left: 97.3%;
+    transform: translate(0%);
+  }
 }/*# sourceMappingURL=navbar.css.map */

@@ -11,6 +11,13 @@
   font-style: normal;
   font-weight: 500;
 }
+@font-face {
+  src: url("./Roslindale_Web/fonts/Roslindale-DisplayCondensedRegular-Testing.woff")
+    format("woff");
+  font-family: "Roslindale";
+  font-style: normal;
+  font-weight: 400;
+}
 
 * {
   margin: 0;
@@ -192,6 +199,9 @@ svg path {
     text-transform: uppercase;
     font-weight: 500;
   }
+  .menu__item:nth-child(2) a {
+    margin-left: 1em;
+  }
 }
 
 .menu__secondary {
@@ -200,20 +210,8 @@ svg path {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 8em;
 
   .menu__item a {
     font-size: 36px;
-  }
-
-  .menu__container .menu__wrapper:nth-child(1) {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .menu__primary .menu__container .menu__wrapper .menu__item:nth-child(1) a,
-  .menu__primary .menu__container .menu__wrapper .menu__item:nth-child(3) a {
-    margin-left: 1em;
   }
 }
