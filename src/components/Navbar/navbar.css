@@ -1,3 +1,27 @@
+@font-face {
+  src: url("../Roslindale_Web/fonts/Roslindale-DisplayCondensedSemiBold-Testing.woff") format("woff");
+  font-family: "Roslindale";
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  src: url("../Roslindale_Web/fonts/Roslindale-DisplayCondensedRegular-Testing.woff") format("woff");
+  font-family: "Roslindale";
+  font-style: normal;
+  font-weight: 400;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Roslindale", sans-serif;
+}
+
 .navbar {
   width: 95%;
   margin: auto;

@@ -1,24 +1,25 @@
-import React, { useRef, useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import "./navbar.css";
 
-const Navbar = ({ timeline }) => {
+const Navbar = () => {
   let logo = useRef(null);
 
   useEffect(() => {
-    const animation = gsap.from(logo, {
+    const timeline = gsap.timeline();
+    const animation = gsap.from(logo.current, {
       delay: 0.5,
       duration: 1,
       opacity: 0,
       y: 50,
-      immediateRender: false, // Prevents the animation from reverting to initial state
+      immediateRender: false,
     });
 
     timeline.add(animation);
 
     // Set the final state of the logo after the animation completes
     timeline.add(() => {
-      gsap.set(logo, {
+      gsap.set(logo.current, {
         opacity: 1,
         y: 0,
       });
@@ -27,7 +28,7 @@ const Navbar = ({ timeline }) => {
 
   return (
     <header>
-      <nav className="navbar" ref={(el) => (logo = el)}>
+      <nav className="navbar" ref={(el) => (logo.current = el)}>
         <span></span>
         <h2 className="navbar__headline">hands-on-learning</h2>
       </nav>

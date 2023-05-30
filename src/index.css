@@ -39,3 +39,6 @@ body {
   font-family: "Archivo", sans-serif;
   color: #0a0a0a;
 }
+.hide {
+  visibility: hidden;
+}

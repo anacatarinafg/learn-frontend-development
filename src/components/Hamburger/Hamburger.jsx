@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { CSSRulePlugin } from "gsap/all";
-import "./responsivetest.css";
+import "./hamburger.css";
 
-const Responsivetest = () => {
+const Hamburger = () => {
   const tl = useRef(gsap.timeline({ paused: true })).current;
   const spanBefore = useRef(null);
   const path = useRef(null);
@@ -14,16 +14,31 @@ const Responsivetest = () => {
     gsap.set(".navbar__menu", { visibility: "hidden" });
   }, []);
 
+  const toggleMenu = () => {
+    const navbar = document.querySelector(".navbar");
+    const slideshow = document.querySelector(".slideshow");
+    const hamburger = document.getElementById("hamburger");
+
+    if (hamburger.classList.contains("active")) {
+      // Hamburger is active, close the menu
+      navbar.classList.remove("hide");
+      slideshow.classList.remove("hide");
+    } else {
+      // Hamburger is not active, open the menu
+      navbar.classList.add("hide");
+      slideshow.classList.add("hide");
+    }
+
+    hamburger.classList.toggle("active");
+    tl.reversed(!tl.reversed());
+  };
+
   const revealMenu = () => {
     revealMenuItems();
 
-    const hamburger = document.getElementById("hamburger");
     const toggleBtn = document.getElementById("toggle-btn");
 
-    toggleBtn.onclick = function (e) {
-      hamburger.classList.toggle("active");
-      tl.reversed(!tl.reversed());
-    };
+    toggleBtn.onclick = toggleMenu;
   };
 
   const revealMenuItems = () => {
@@ -72,7 +87,7 @@ const Responsivetest = () => {
       path.current,
       0.8,
       {
-        opacity: 1, // Update the opacity to 1
+        opacity: 1,
         attr: {
           d: start,
         },
@@ -83,7 +98,7 @@ const Responsivetest = () => {
       path.current,
       0.8,
       {
-        opacity: 1, // Update the opacity to 1
+        opacity: 1,
         attr: {
           d: end,
         },
@@ -171,4 +186,4 @@ const Responsivetest = () => {
   );
 };
 
-export default Responsivetest;
+export default Hamburger;

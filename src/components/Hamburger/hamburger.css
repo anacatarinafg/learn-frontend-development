@@ -5,13 +5,13 @@
 }
 
 @font-face {
-  src: url("./Roslindale_Web/fonts/Roslindale-DisplayCondensedSemiBold-Testing.woff") format("woff");
+  src: url("../Roslindale_Web/fonts/Roslindale-DisplayCondensedSemiBold-Testing.woff") format("woff");
   font-family: "Roslindale";
   font-style: normal;
   font-weight: 500;
 }
 @font-face {
-  src: url("./Roslindale_Web/fonts/Roslindale-DisplayCondensedRegular-Testing.woff") format("woff");
+  src: url("../Roslindale_Web/fonts/Roslindale-DisplayCondensedRegular-Testing.woff") format("woff");
   font-family: "Roslindale";
   font-style: normal;
   font-weight: 400;
@@ -85,7 +85,7 @@ svg path {
   position: relative;
   width: 20px;
   height: 20px;
-  z-index: 2;
+  z-index: 12;
 }
 #hamburger span {
   position: absolute;
@@ -219,4 +219,4 @@ svg path {
   .menu__primary .menu__item:nth-child(4) a {
     margin-left: 0;
   }
-}/*# sourceMappingURL=responsivetest.css.map */
+}/*# sourceMappingURL=hamburger.css.map */

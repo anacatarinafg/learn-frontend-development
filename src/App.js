@@ -1,14 +1,14 @@
 import './App.css';
-import { gsap } from 'gsap';
-import Test from './components/test';
-import Responsivetest from './components/responsivetest';
+import Slideshow from './components/Slideshow/Slideshow';
+import Navbar from './components/Navbar/Navbar';
+import Hamburger from './components/Hamburger/Hamburger';
 
 function App() {
-  let timeline = gsap.timeline();
   return (
     <div>
-      <Responsivetest timeline={timeline} />
-      <Test timeline={timeline} />
+      <Navbar />
+      <Slideshow />
+      <Hamburger />
     </div>
   );
 }
