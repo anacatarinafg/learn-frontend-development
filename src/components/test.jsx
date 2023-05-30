@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../components/Slideshow/slideshow.css";
 import Navbar from "../components/Navbar/Navbar";
 import { BsFillCircleFill } from "react-icons/bs";
 
-const Test = () => {
+const Test = ({ timeline }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [backgroundColor, setBackgroundColor] = useState("#7166EE");
 
@@ -72,10 +72,11 @@ const Test = () => {
       document.body.style.backgroundColor = "";
     };
   }, [backgroundColor]);
+  
 
   return (
     <>
-      <Navbar />
+      <Navbar timeline={timeline}/>
       <article
         className="slideshow"
         style={{ backgroundColor, height: "100vh" }}
