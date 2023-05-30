@@ -99,7 +99,7 @@ svg path {
     transform: translateY(-50%);
     display: inline-block;
     width: 24px;
-    height: 1.25px;
+    height: 2px;
     background: var(--overlay-bg);
     transition: transform 0.25s;
 
@@ -109,7 +109,7 @@ svg path {
       display: inline-block;
       content: "";
       width: 18px;
-      height: 1.25px;
+      height: 2px;
       background-color: #e2e2dc;
       transform: translateY(-4px);
       transition: transform 0.25s;
