@@ -34,18 +34,18 @@ body {
     .contact__box {
     }
     .contact__label {
+      font-size: 18px;
       color: #474747;
     }
     .contact__email {
+      font-size: 18px;
     }
   }
   .contact__list {
     display: flex;
     gap: 3px;
-    .contact__link {
-      .contact__item {
-      }
-    }
+    font-size: 18px;
+
   }
 }
 

@@ -8,8 +8,7 @@ const Contact = () => {
         <section className="contact">
           <article className="contact__headline">
             <p className="contact__text">
-              If you want to contribute for this project, reach out to me thru
-              my socials or email
+            For contributions, reach out to me through social media or email. Let's connect and explore collaboration possibilities!
             </p>
           </article>
           <article className="contact__info">

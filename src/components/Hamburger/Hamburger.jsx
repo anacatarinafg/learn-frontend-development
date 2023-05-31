@@ -25,7 +25,7 @@ const Hamburger = () => {
       navbar.classList.remove("hide");
       if (slideshow) {
         slideshow.classList.remove("hide");
-      } 
+      }
       if (contacts) {
         contacts.classList.remove("hide");
       }
