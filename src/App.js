@@ -1,15 +1,20 @@
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
 import './App.css';
 import Slideshow from './components/Slideshow/Slideshow';
-import Navbar from './components/Navbar/Navbar';
-import Hamburger from './components/Hamburger/Hamburger';
+import Contact from './components/Contact/Contact';
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      <Slideshow />
-      <Hamburger />
-    </div>
+    <Router>
+      <Routes>
+        <Route index element={<Slideshow />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
   );
 }
 
