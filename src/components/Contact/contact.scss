@@ -1,5 +1,6 @@
 body {
     background-color: #e5e3dc;
+    color: #0a0a0a;
 }
 .contact__container {
   width: 100%;
@@ -53,11 +54,10 @@ body {
   margin: 0 auto;
   white-space: nowrap;
   overflow: hidden;
-  padding-bottom: 1.2em;
   position: absolute;
-  bottom: 0;
+  bottom: 20px;
   .contact__marqueeText {
-    font-size: 116px;
+    font-size: 152px;
     text-transform: uppercase;
     padding-left: -10%;
     display: inline-block;

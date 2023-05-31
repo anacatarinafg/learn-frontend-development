@@ -18,20 +18,26 @@ const Hamburger = () => {
     const navbar = document.querySelector(".navbar");
     const slideshow = document.querySelector(".slideshow");
     const hamburger = document.getElementById("hamburger");
+    const contacts = document.querySelector(".contact");
 
-    console.log(slideshow)
-
-    // PROBLEM
-    // Como o slideshow só existe numa página, ao tentar abrir o hamburger noutra página que não tenha o slideshow, vai dar-me erro
     if (hamburger.classList.contains("active")) {
       // Hamburger is active, close the menu
       navbar.classList.remove("hide");
-      slideshow.classList.remove("hide");
+      if (slideshow) {
+        slideshow.classList.remove("hide");
+      } 
+      if (contacts) {
+        contacts.classList.remove("hide");
+      }
     } else {
       // Hamburger is not active, open the menu
       navbar.classList.add("hide");
-      slideshow.classList.add("hide");
-
+      if (slideshow) {
+        slideshow.classList.add("hide");
+      }
+      if (contacts) {
+        contacts.classList.add("hide");
+      }
     }
 
     hamburger.classList.toggle("active");
@@ -168,7 +174,7 @@ const Hamburger = () => {
           <div className="menu__container">
             <div className="menu__wrapper">
               <div className="menu__item">
-                <a href="">Index</a>
+                <a href="/">Index</a>
                 <div className="menu__item--revealer"></div>
               </div>
               <div className="menu__item">
