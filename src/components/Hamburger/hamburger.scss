@@ -23,6 +23,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html,
@@ -30,17 +31,138 @@ body {
   width: 100%;
   height: 100%;
   font-family: "Roslindale", sans-serif;
-}
-.navbar__overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+  background-color: #e5e3dc;
+  color: #0a0a0a;
 }
 
-svg path {
-  fill: var(--overlay-bg);
+#toggle-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2em;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.menu-open {
+  color: #0a0a0a;
+}
+
+.menu-open,
+.menu-close {
+  width: 10%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 40px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.menu-close {
+  display: none;
+}
+
+.navbar__socials {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 40px 100px;
+}
+
+.navbar__link {
+  text-transform: uppercase;
+  margin: 0 20px;
+  letter-spacing: 0px;
+}
+
+.navbar__hamburgerOpened {
+  position: fixed;
+  left: -100%;
+  width: 100%;
+  height: 100vh;
+  background: #e5e3dc;
+  z-index: 150;
+  color: #0a0a0a;
+}
+
+.menu__item {
+  position: relative;
+  padding: 0 6vw;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.menu__link {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  transition: opacity 0.4s;
+}
+
+.menu__link::before {
+  all: initial;
+  counter-increment: menu;
+  position: absolute;
+  bottom: 60%;
+  left: 0;
+  pointer-events: none;
+}
+
+.menu__link:hover {
+  transition-duration: 0.1s;
+  opacity: 0;
+}
+
+.menu {
+  padding: 10vh 0 25vh;
+  --offset: 20vw;
+  --move-initial: calc(-25% + var(--offset));
+  --move-final: calc(-50% + var(--offset));
+  font-size: 7vw;
+}
+
+.marquee {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  color: rgb(165, 165, 165);
+  pointer-events: none;
+}
+
+.marquee__inner {
+  width: fit-content;
+  display: flex;
+  position: relative;
+  opacity: 0;
+  transition: all 0.1s;
+  transform: translateX(60px);
+}
+
+.menu__link:hover ~ .marquee .marquee__inner {
+  opacity: 1;
+  transform: translateX(0px);
+  transition-duration: 0.4s;
+}
+
+.menu__link,
+.marquee span {
+  white-space: nowrap;
+  font-size: 7vw;
+  padding: 0 1vw;
+  line-height: 1.15;
+}
+
+.marquee span {
+  font-style: italic;
 }
 
 #toggle-btn {
@@ -61,29 +183,29 @@ svg path {
   position: absolute;
   width: 100px;
   height: 100px;
-  border: 1px solid var(--overlay-bg);
+  border: 1px solid #0a0a0a;
 }
 
 .navbar__buttonOutline--1 {
-  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
   animation: morph 4s linear infinite;
 }
 
 .navbar__buttonOutline--2 {
-  border-radius: 53% 47% 43% 57% / 51% 39% 61% 49%;
+  border-radius: 53% 47% 43% 57%/51% 39% 61% 49%;
 }
 
 @keyframes morph {
   0% {
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
   }
 
   50% {
-    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
   }
 
   100% {
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
   }
 }
 
@@ -92,162 +214,37 @@ svg path {
   width: 20px;
   height: 20px;
   z-index: 12;
-
-  span {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    display: inline-block;
-    width: 24px;
-    height: 2px;
-    background: var(--overlay-bg);
-    transition: transform 0.25s;
-
-    &::before {
-      position: absolute;
-      right: 0;
-      display: inline-block;
-      content: "";
-      width: 18px;
-      height: 2px;
-      background-color: #e2e2dc;
-      transform: translateY(-4px);
-      transition: transform 0.25s;
-    }
-  }
-
-  &.active {
-    span {
-      transform: rotate(45deg);
-
-      &::before {
-        top: unset;
-        width: 24px;
-        transform: rotate(-90deg);
-      }
-    }
-  }
 }
 
-.navbar__menu {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  display: flex;
-
-  > div {
-    height: 100%;
-    display: flex;
-  }
-
-  a {
-    position: relative;
-    top: 120px;
-    line-height: 70%;
-    text-decoration: none;
-    color: var(--link-color);
-
-    span {
-      font-size: 20px;
-      margin-right: 2em;
-    }
-  }
+#hamburger span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background: #0a0a0a;
+  transition: transform 0.25s;
 }
 
-.menu__item {
-  position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 100px;
-    left: -20px;
-    width: 120%;
-    height: 200%;
-    background-color: var(--overlay-bg);
-    margin: 0 auto;
-  }
+#hamburger span::before {
+  position: absolute;
+  right: 0;
+  display: inline-block;
+  content: "";
+  width: 18px;
+  height: 2px;
+  background-color: #e2e2dc;
+  transform: translateY(-4px);
+  transition: transform 0.25s;
 }
 
-.menu__container {
-  width: 70%;
-  height: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background: var(--overlay-bg);
+#hamburger.active span {
+  transform: rotate(45deg);
 }
 
-.menu__primary {
-  flex: 3;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--overlay-bg);
-
-  .menu__container .menu__wrapper {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  a {
-    font-size: 125px;
-    text-transform: uppercase;
-    font-weight: 500;
-  }
-
-  .menu__item:nth-child(2) a,
-  .menu__item:nth-child(4) a {
-    margin-left: 1em;
-  }
+#hamburger.active span::before {
+  top: unset;
+  width: 24px;
+  transform: rotate(-90deg);
 }
-
-@media (max-width: 768px) {
-  .navbar__menu {
-    height: 100%;
-    flex-direction: column;
-    justify-content: start;
-
-    > div {
-      flex-direction: column;
-    }
-
-    a {
-      position: relative;
-      line-height: 70%;
-      text-decoration: none;
-      color: var(--link-color);
-
-      span {
-        font-size: 20px;
-        margin-right: 1em;
-      }
-    }
-  }
-
-  .menu__primary {
-    flex: 1;
-    margin-top: 0px;
-
-    a {
-      font-size: 52px;
-    }
-
-    .menu__item:nth-child(2) a,
-    .menu__item:nth-child(4) a {
-      margin-left: 0;
-    }
-  }
-}
-
-
-
-
-
-

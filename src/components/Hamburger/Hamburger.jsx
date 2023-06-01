@@ -1,197 +1,120 @@
-import React, { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { CSSRulePlugin } from "gsap/all";
-import "./hamburger.css";
+import React, { useEffect } from 'react';
+import { gsap, Expo } from 'gsap';
+import './hamburger.css';
 
 const Hamburger = () => {
-  const tl = useRef(gsap.timeline({ paused: true })).current;
-  const spanBefore = useRef(null);
-  const path = useRef(null);
-
   useEffect(() => {
-    spanBefore.current = CSSRulePlugin.getRule("hamburger span:before");
-    gsap.set(spanBefore.current, { background: "#000" });
-    gsap.set(".navbar__menu", { visibility: "hidden" });
-  }, []);
+    let closeMenu = document.querySelector('.menu-close');
+    var t1 = gsap.timeline({ paused: true });
 
-  const toggleMenu = () => {
-    const navbar = document.querySelector(".navbar");
-    const slideshow = document.querySelector(".slideshow");
-    const hamburger = document.getElementById("hamburger");
-    const contacts = document.querySelector(".contact");
-
-    if (hamburger.classList.contains("active")) {
-      // Hamburger is active, close the menu
-      navbar.classList.remove("hide");
-      if (slideshow) {
-        slideshow.classList.remove("hide");
-      }
-      if (contacts) {
-        contacts.classList.remove("hide");
-      }
-    } else {
-      // Hamburger is not active, open the menu
-      navbar.classList.add("hide");
-      if (slideshow) {
-        slideshow.classList.add("hide");
-      }
-      if (contacts) {
-        contacts.classList.add("hide");
-      }
-    }
-
-    hamburger.classList.toggle("active");
-    tl.reversed(!tl.reversed());
-  };
-
-  const revealMenu = () => {
-    revealMenuItems();
-
-    const toggleBtn = document.getElementById("toggle-btn");
-
-    toggleBtn.onclick = toggleMenu;
-  };
-
-  const revealMenuItems = () => {
-    const start = "M0 502S175 272 500 272s500 230 500 230V0H0Z";
-    const end = "M0 1005S175 995 500 995s500 5 500 5V0H0Z";
-
-    const power2 = "power2.inOut";
-    const power4 = "power4.inOut";
-
-    tl.to("#hamburger", 1.25, {
-      marginTop: "-5px",
-      x: -40,
-      y: 40,
-      ease: power4,
+    t1.to('.navbar__hamburgerOpened', 1, {
+      left: 0,
+      ease: Expo.easeInOut,
     });
-    tl.to(
-      "#hamburger span",
-      1,
-      {
-        background: "#e2e2dc",
-        ease: power2,
-      },
-      "<"
-    );
-    tl.to(
-      spanBefore.current,
-      1,
-      {
-        background: "#e2e2dc",
-        ease: power2,
-      },
-      "<"
-    );
-    tl.to(
-      ".navbar__button .navbar__buttonOutline",
-      1.25,
-      {
-        x: -40,
-        y: 40,
-        border: "1px solid #e2e2dc",
-        ease: power4,
-      },
-      "<"
-    );
-    tl.to(
-      path.current,
+
+    t1.staggerFrom(
+      '.menu > div',
       0.8,
-      {
-        opacity: 1,
-        attr: {
-          d: start,
-        },
-        ease: "power2.inOut",
-      },
-      "<"
-    ).to(
-      path.current,
-      0.8,
-      {
-        opacity: 1,
-        attr: {
-          d: end,
-        },
-        ease: "power2.inOut",
-      },
-      "-0.5"
+      { y: 100, opacity: 1, ease: Expo.easeOut },
+      '0.1',
+      '-=0.4'
     );
 
-    tl.to(
-      ".navbar__menu",
-      1,
-      {
-        visibility: "visible",
-      },
-      "-=0.5"
+    t1.staggerFrom(
+      '.navbar__socials > a',
+      0.8,
+      { y: 100, opacity: 1, ease: Expo.easeOut },
+      '0.4',
+      '-=0.6'
     );
-    tl.to(
-      ".menu__item > a",
-      1,
-      {
-        top: 0,
-        ease: "power3.out",
-        stagger: {
-          amount: 0.5,
-        },
-      },
-      "-=1"
-    ).reverse();
-  };
 
-  useEffect(() => {
-    revealMenu();
+    t1.reverse();
+
+    const handleMenuOpen = () => {
+      t1.reversed(!t1.reversed());
+      closeMenu.style.display = 'block';
+    };
+
+    const handleMenuClose = () => {
+      t1.reversed(!t1.reversed());
+      closeMenu.style.display = 'none';
+    };
+
+    document.querySelector('.menu-open').addEventListener('click', handleMenuOpen);
+    document.querySelector('.menu-close').addEventListener('click', handleMenuClose);
+
+    // Clean up event listeners
+    return () => {
+      document.querySelector('.menu-open').removeEventListener('click', handleMenuOpen);
+      document.querySelector('.menu-close').removeEventListener('click', handleMenuClose);
+    };
   }, []);
 
   return (
     <>
-      {/* Toggle button */}
-      <div className="navbar__button" id="toggle-btn">
+
+      <div className="navbar__button menu-open" id="toggle-btn">
         <div className="navbar__buttonOutline navbar__buttonOutline--1"></div>
         <div className="navbar__buttonOutline navbar__buttonOutline--2"></div>
         <div id="hamburger">
           <span></span>
         </div>
       </div>
-
-      {/* Svg overlay */}
-      <div>
-        <svg className="navbar__overlay" viewBox="100 200 200 100">
-          <path
-            ref={path}
-            d="M0 0 L100 0 L100 100 L0 100 Z"
-            stroke="none"
-            fill="#0a0a0a"
-            style={{ opacity: 0 }}
-          ></path>
-        </svg>
-      </div>
-
-      {/* Menu items */}
-      <div className="navbar__menu">
-        <div className="menu__primary">
-          <div className="menu__container">
-            <div className="menu__wrapper">
-              <div className="menu__item">
-                <a href="/">Index</a>
-                <div className="menu__item--revealer"></div>
-              </div>
-              <div className="menu__item">
-                <a href="">Resources</a>
-                <div className="menu__item--revealer"></div>
-              </div>
-              <div className="menu__item">
-                <a href="">Docs</a>
-                <div className="menu__item--revealer"></div>
-              </div>
-              <div className="menu__item">
-                <a href="/contact">Contact</a>
-                <div className="menu__item--revealer"></div>
+      <div className="navbar__hamburgerOpened">
+        <div className="navbar__button menu-close">
+          <div className="navbar__buttonOutline navbar__buttonOutline--1"></div>
+          <div className="navbar__buttonOutline navbar__buttonOutline--2"></div>
+          <div id="hamburger">
+            <span></span>
+          </div>
+        </div>
+        <div className="navbar__socials">
+          <a href="https://github.com/anacatarinafg" target="_blank" className="navbar__link">
+            github
+          </a>
+          <a href="https://twitter.com/anacatarinafg" target="_blank" className="navbar__link">
+            twitter
+          </a>
+          <a href="https://www.linkedin.com/in/ana-catarina-b87b75236/" target="_blank" className="navbar__link">
+            linkedin
+          </a>
+        </div>
+        <nav className="menu">
+          <div className="menu__item">
+            <a href="/" className="menu__link">Index</a>
+            <div className="marquee">
+              <div className="marquee__inner">
+                <span>Index — Index — Index — Index — Index — Index — Index</span>
               </div>
             </div>
           </div>
-        </div>
+          <div className="menu__item">
+            <a href="/" className="menu__link">Docs</a>
+            <div className="marquee">
+              <div className="marquee__inner">
+                <span>Docs — Docs — Docs — Docs — Docs — Docs — Docs</span>
+              </div>
+            </div>
+          </div>
+          <div className="menu__item">
+            <a href="/" className="menu__link">Resources</a>
+            <div className="marquee">
+              <div className="marquee__inner">
+                <span>
+                  Resources — Resources — Resources — Resources — Resources — Resources — Resources
+                </span>
+              </div>
+            </div>
+          </div>
+          <div className="menu__item">
+            <a href="/contact" className="menu__link">Contact</a>
+            <div className="marquee">
+              <div className="marquee__inner">
+                <span>Contact — Contact — Contact — Contact — Contact — Contact — Contact</span>
+              </div>
+            </div>
+          </div>
+        </nav>
       </div>
     </>
   );
