@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { gsap, Expo } from 'gsap';
 import './hamburger.css';
+import { GrFormClose } from 'react-icons/gr';
+import { HiMenu } from 'react-icons/hi';
 
 const Hamburger = () => {
   useEffect(() => {
@@ -56,16 +58,14 @@ const Hamburger = () => {
       <div className="navbar__button menu-open" id="toggle-btn">
         <div className="navbar__buttonOutline navbar__buttonOutline--1"></div>
         <div className="navbar__buttonOutline navbar__buttonOutline--2"></div>
-        <div id="hamburger">
-          <span></span>
-        </div>
+          <span className='navbar__hamburgerIcon'><HiMenu /></span>
       </div>
       <div className="navbar__hamburgerOpened">
         <div className="navbar__button menu-close">
           <div className="navbar__buttonOutline navbar__buttonOutline--1"></div>
           <div className="navbar__buttonOutline navbar__buttonOutline--2"></div>
-          <div id="hamburger">
-            <span></span>
+          <div className="hamburger">
+          <span className='navbar__hamburgerIcon'><GrFormClose /></span>
           </div>
         </div>
         <div className="navbar__socials">
