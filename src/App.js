@@ -6,6 +6,7 @@ import {
 import './App.css';
 import Slideshow from './components/Slideshow/Slideshow';
 import Contact from './components/Contact/Contact';
+import Resources from "./components/Resources/Resources";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route index element={<Slideshow />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/resources" element={<Resources />} />
       </Routes>
     </Router>
   );

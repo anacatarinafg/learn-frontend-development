@@ -97,7 +97,7 @@ const Hamburger = () => {
             </div>
           </div>
           <div className="menu__item">
-            <a href="/" className="menu__link">Resources</a>
+            <a href="/resources" className="menu__link">Resources</a>
             <div className="marquee">
               <div className="marquee__inner">
                 <span>

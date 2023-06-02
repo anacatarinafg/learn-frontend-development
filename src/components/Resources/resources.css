@@ -1,1 +1,48 @@
-/*# sourceMappingURL=resources.css.map */
+:root {
+  --bg: #e5e3dc;
+  --link-color: #e2e2dc;
+  --overlay-bg: #0a0a0a;
+}
+
+@font-face {
+  src: url("../Roslindale_Web/fonts/Roslindale-DisplayCondensedSemiBold-Testing.woff") format("woff");
+  font-family: "Roslindale";
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  src: url("../Roslindale_Web/fonts/Roslindale-DisplayCondensedRegular-Testing.woff") format("woff");
+  font-family: "Roslindale";
+  font-style: normal;
+  font-weight: 400;
+}
+.wheel {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.wheel .wheel__list {
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  transform-origin: center;
+}
+.wheel .wheel__list .wheel__item {
+  font-size: 152px;
+  color: rgb(165, 165, 165);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.wheel .wheel__list .wheel__item.selected {
+  color: var(--overlay-bg);
+}
+.wheel .wheel__list .wheel__item .wheel__number {
+  font-size: 26px;
+  margin-left: 15px;
+}/*# sourceMappingURL=resources.css.map */
