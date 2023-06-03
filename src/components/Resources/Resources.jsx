@@ -3,28 +3,33 @@ import './resources.css';
 
 const Resources = () => {
   const wheelRef = useRef(null);
-  const [selectedItem, setSelectedItem] = useState(0); // Initially no item selected
+  const [selectedItem, setSelectedItem] = useState(2); // Initially no item selected
 
   const itemList = [
     {
       title: 'Documentation',
       number: '01',
+      link: '/documentation'
     },
     {
       title: 'Videos',
       number: '02',
+      link: '/videos'
     },
     {
       title: 'Courses',
       number: '03',
+      link: '/courses'
     },
     {
       title: 'Blogs',
       number: '04',
+      link: '/blogs'
     },
     {
       title: 'Motivation',
       number: '05',
+      link: '/motivation'
     },
   ];
 
@@ -34,14 +39,14 @@ const Resources = () => {
     const itemCount = items.length;
 
     // Calculate the rotation angle for each item
-    const rotationIncrement = 20 / itemCount;
+    const rotationIncrement = -90 / itemCount;
 
     // Calculate the base rotation for the selected item
     const baseRotation = selectedItem * rotationIncrement;
 
     // Apply the rotation to each item
     items.forEach((item, index) => {
-      const rotation = (rotationIncrement * index - baseRotation) % 60;
+      const rotation = (rotationIncrement * index - baseRotation) % 360;
       item.style.transform = `rotate(${rotation}deg)`;
       item.classList.remove('selected');
     });
@@ -82,7 +87,7 @@ const Resources = () => {
         <ul className="wheel__list" ref={wheelRef}>
           {itemList.map((item, index) => (
             <li key={index} className="wheel__item">
-              <a href="" className="wheel__link">
+              <a href={item.link} className="wheel__link">
                 {item.title}
               </a>
               <span className="wheel__number">{item.number}</span>
