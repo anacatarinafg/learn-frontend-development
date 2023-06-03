@@ -7,9 +7,9 @@ const Resources = () => {
 
   const itemList = [
     {
-      title: 'Documentation',
+      title: 'Cheatsheets',
       number: '01',
-      link: '/documentation'
+      link: '/cheatsheets'
     },
     {
       title: 'Videos',
@@ -22,14 +22,14 @@ const Resources = () => {
       link: '/courses'
     },
     {
-      title: 'Blogs',
+      title: 'Tools',
       number: '04',
-      link: '/blogs'
+      link: '/tools'
     },
     {
-      title: 'Motivation',
+      title: 'Blogs',
       number: '05',
-      link: '/motivation'
+      link: '/blogs'
     },
   ];
 
@@ -48,6 +48,7 @@ const Resources = () => {
     items.forEach((item, index) => {
       const rotation = (rotationIncrement * index - baseRotation) % 360;
       item.style.transform = `rotate(${rotation}deg)`;
+      item.style.transition = 'transform 0.5s ease';
       item.classList.remove('selected');
     });
 
@@ -56,29 +57,26 @@ const Resources = () => {
   }, [selectedItem]);
 
   const handleWheelEvent = (event) => {
+    const wheel = wheelRef.current;
     const delta = Math.sign(event.deltaY);
+    const items = Array.from(wheel.children);
+    const itemCount = items.length;
 
     if (delta === 1) {
       // Scroll down
       setSelectedItem((prevSelectedItem) => {
-        const itemCount = itemList.length;
-        if (prevSelectedItem === itemCount - 1) {
-          return 0;
-        } else {
-          return prevSelectedItem + 1;
-        }
+        const nextItem = prevSelectedItem + 1;
+        return nextItem >= itemCount ? 0 : nextItem;
       });
     } else if (delta === -1) {
       // Scroll up
       setSelectedItem((prevSelectedItem) => {
-        const itemCount = itemList.length;
-        if (prevSelectedItem === 0) {
-          return itemCount - 1;
-        } else {
-          return prevSelectedItem - 1;
-        }
+        const nextItem = prevSelectedItem - 1;
+        return nextItem < 0 ? itemCount - 1 : nextItem;
       });
     }
+
+    event.preventDefault(); // Prevent default scroll behavior
   };
 
   return (

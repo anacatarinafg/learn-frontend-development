@@ -1,5 +1,4 @@
 .slideshow {
-  width: 95%;
   margin: auto;
   padding: 3.7em 0;
 
@@ -22,9 +21,9 @@
 
   .slideshow__information {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    gap: 100px;
+    gap: 10px;
     flex-direction: column;
 
     .slideshow__hello {
@@ -54,7 +53,7 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 5em;
+    padding: 2.5em;
 
     .slideshow__slide {
       width: 10px;

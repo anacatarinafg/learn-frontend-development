@@ -25,22 +25,30 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  padding: 2.5%;
 }
 .wheel .wheel__list {
   width: 100vw;
   transform-origin: center;
+  transition: transform 0.5s ease;
 }
 .wheel .wheel__list .wheel__item {
   font-size: 152px;
   color: rgb(165, 165, 165);
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   gap: 10px;
+  text-transform: uppercase;
 }
 .wheel .wheel__list .wheel__item.selected {
   color: var(--overlay-bg);
 }
 .wheel .wheel__list .wheel__item .wheel__number {
-  font-size: 26px;
+  font-size: 32px;
   margin-left: 15px;
+  margin-bottom: 32.5px;
+  font-weight: 500;
+  border-radius: 50%;
+  padding: 0.25em;
+  border: 1px solid rgb(165, 165, 165);
 }/*# sourceMappingURL=resources.css.map */

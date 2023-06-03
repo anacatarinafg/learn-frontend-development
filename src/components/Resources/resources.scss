@@ -20,7 +20,6 @@
   font-weight: 400;
 }
 
-
 .wheel {
   position: fixed;
   left: 0;
@@ -30,6 +29,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  padding: 2.5%;
 
   .wheel__wrapper {
   }
@@ -37,13 +37,15 @@
   .wheel__list {
     width: 100vw;
     transform-origin: center;
+      transition: transform 0.5s ease;
 
     .wheel__item {
       font-size: 152px;
       color: rgb(165, 165, 165);
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       gap: 10px;
+      text-transform: uppercase;
 
       &.selected {
         color: var(--overlay-bg);
@@ -52,8 +54,13 @@
       }
 
       .wheel__number {
-        font-size: 26px;
+        font-size: 32px;
         margin-left: 15px;
+        margin-bottom: 32.5px;
+        font-weight: 500;
+        border-radius: 50%;
+        padding: .25em;
+        border: 1px solid rgb(165, 165, 165);
       }
     }
   }
