@@ -2,8 +2,11 @@ import React, { useEffect, useRef, useState } from 'react';
 import './resources.css';
 
 const Resources = () => {
-  const wheelRef = useRef(null);
+  const wheelRef = useRef();
   const [selectedItem, setSelectedItem] = useState(2); // Initially no item selected
+  const [isScrolling, setIsScrolling] = useState(false); // Track scrolling status
+  const rotationInterval = 1500; // Rotation interval in milliseconds
+  let timer = null; // Timer reference
 
   const itemList = [
     {
@@ -35,6 +38,8 @@ const Resources = () => {
 
   useEffect(() => {
     const wheel = wheelRef.current;
+    if (!wheel) return;
+
     const items = Array.from(wheel.children);
     const itemCount = items.length;
 
@@ -57,30 +62,60 @@ const Resources = () => {
   }, [selectedItem]);
 
   const handleWheelEvent = (event) => {
-    const wheel = wheelRef.current;
-    const delta = Math.sign(event.deltaY);
-    const items = Array.from(wheel.children);
-    const itemCount = items.length;
+    if (timer) {
+      clearInterval(timer);
+      timer = null;
+    }
+    setIsScrolling(true);
 
-    if (delta === 1) {
-      // Scroll down
-      setSelectedItem((prevSelectedItem) => {
-        const nextItem = prevSelectedItem + 1;
-        return nextItem >= itemCount ? 0 : nextItem;
-      });
-    } else if (delta === -1) {
-      // Scroll up
+    if (event.deltaY < 0) {
       setSelectedItem((prevSelectedItem) => {
         const nextItem = prevSelectedItem - 1;
-        return nextItem < 0 ? itemCount - 1 : nextItem;
+        return nextItem < 0 ? itemList.length - 1 : nextItem;
+      });
+    } else if (event.deltaY > 0) {
+      setSelectedItem((prevSelectedItem) => {
+        const nextItem = prevSelectedItem + 1;
+        return nextItem >= itemList.length ? 0 : nextItem;
       });
     }
 
-    event.preventDefault(); // Prevent default scroll behavior
+    event.preventDefault();
   };
 
+  const handleScrollEnd = () => {
+    setIsScrolling(false);
+  };
+
+  useEffect(() => {
+    const wheel = wheelRef.current;
+    wheel.addEventListener('wheel', handleWheelEvent);
+
+    return () => {
+      wheel.removeEventListener('wheel', handleWheelEvent);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isScrolling) {
+      timer = setInterval(() => {
+        setSelectedItem((prevSelectedItem) => {
+          const nextItem = prevSelectedItem + 1;
+          return nextItem >= itemList.length ? 0 : nextItem;
+        });
+      }, rotationInterval);
+    } else {
+      clearInterval(timer);
+      timer = null;
+    }
+
+    return () => {
+      clearInterval(timer);
+    };
+  }, [isScrolling]);
+
   return (
-    <article className="wheel" onWheel={handleWheelEvent}>
+    <article className="wheel" onScroll={handleScrollEnd}>
       <div className="wheel__wrapper">
         <ul className="wheel__list" ref={wheelRef}>
           {itemList.map((item, index) => (
