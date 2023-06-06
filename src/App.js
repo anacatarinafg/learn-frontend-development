@@ -7,6 +7,7 @@ import './App.css';
 import Slideshow from './components/Slideshow/Slideshow';
 import Contact from './components/Contact/Contact';
 import Resources from "./components/Resources/Resources";
+import Blogs from "./components/Blogs/Blogs";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route index element={<Slideshow />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/resources" element={<Resources />} />
+        <Route path="/blogs" element={<Blogs />} />
       </Routes>
     </Router>
   );
