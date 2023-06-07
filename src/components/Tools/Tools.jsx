@@ -44,42 +44,42 @@ const Tools = () => {
         {
             number: '03',
             image:
-                'https://play-lh.googleusercontent.com/hB9t3Z-mi284_49HA3nAuhO-W5Cyhje7r2P9McdgORoVCd-0SV54c12NMQWLHnqALw',
-            title: 'Medium',
+                'https://www.bookmarks.design/media/image/uigradients.jpg',
+            title: 'UI Gradients',
             text:
-                'The mystical force behind web interactivity. It empowers you to create dynamic, responsive websites.',
+                'Generates beautiful CSS gradients with ready-to-use code snippets.',
         },
         {
             number: '04',
             image:
-                'https://play-lh.googleusercontent.com/hB9t3Z-mi284_49HA3nAuhO-W5Cyhje7r2P9McdgORoVCd-0SV54c12NMQWLHnqALw',
-            title: 'Medium',
+                'https://pitdesigns.com/wp-content/uploads/2020/05/Neumorphism.-Io.jpg',
+            title: 'Neumorphism',
             text:
-                'The mystical force behind web interactivity. It empowers you to create dynamic, responsive websites.',
+                ' Helps you create neumorphic design elements with customizable colors and styles.',
         },
         {
             number: '05',
             image:
-                'https://play-lh.googleusercontent.com/hB9t3Z-mi284_49HA3nAuhO-W5Cyhje7r2P9McdgORoVCd-0SV54c12NMQWLHnqALw',
-            title: 'Medium',
+                '',
+            title: 'CSS Grid Generator',
             text:
-                'The mystical force behind web interactivity. It empowers you to create dynamic, responsive websites.',
+                'Generates custom CSS grid layouts for responsive web designs.',
         },
         {
             number: '06',
             image:
-                'https://play-lh.googleusercontent.com/hB9t3Z-mi284_49HA3nAuhO-W5Cyhje7r2P9McdgORoVCd-0SV54c12NMQWLHnqALw',
-            title: 'Medium',
+                'https://logodownload.org/wp-content/uploads/2020/11/canva-logo-0.png',
+            title: 'Canva',
             text:
-                'The mystical force behind web interactivity. It empowers you to create dynamic, responsive websites.',
+                'A graphic design tool that provides templates, elements, and a drag-and-drop editor for creating various visuals.',
         },
         {
             number: '07',
             image:
-                'https://play-lh.googleusercontent.com/hB9t3Z-mi284_49HA3nAuhO-W5Cyhje7r2P9McdgORoVCd-0SV54c12NMQWLHnqALw',
-            title: 'Medium',
+                'https://res.cloudinary.com/practicaldev/image/fetch/s--8p7s7734--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://www.faviator.xyz/assets/logo.png',
+            title: 'Favicon',
             text:
-                'The mystical force behind web interactivity. It empowers you to create dynamic, responsive websites.',
+                ' Generates favicons in various sizes and formats from an uploaded image or an icon library.',
         },
 
     ];
@@ -87,9 +87,9 @@ const Tools = () => {
     return (
         <article className="blogs">
             <section className="blogs__information">
-                <h2 className="blogs__headline">Tools</h2>
+                <h2 className="blogs__headline">Tools / Generators</h2>
                 <p className="blogs__text">
-                    Create beautiful webpages with those generator tools.
+                These generators can save you time and effort by providing ready-made design assets.
                 </p>
                 <p className="blogs__warning">selected tools</p>
             </section>
