@@ -64,8 +64,11 @@ body {
   cursor: pointer;
 }
 
-.menu-close {
-  display: none;
+.menu-close .navbar__hamburgerIcon {
+  width: 100%;
+  padding: 3.7em 2em;
+  margin-top: 2em;
+
 }
 
 .navbar__socials {

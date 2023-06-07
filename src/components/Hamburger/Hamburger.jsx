@@ -65,7 +65,7 @@ const Hamburger = () => {
           <div className="navbar__buttonOutline navbar__buttonOutline--1"></div>
           <div className="navbar__buttonOutline navbar__buttonOutline--2"></div>
           <div className="hamburger">
-          <span className='navbar__hamburgerIcon'><GrFormClose /></span>
+          <span className='navbar__hamburgerIcon' style={{ color: 'red' }}><GrFormClose /></span>
           </div>
         </div>
         <div className="navbar__socials">

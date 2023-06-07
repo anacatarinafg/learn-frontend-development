@@ -89,9 +89,25 @@ const Tools = () => {
             <section className="blogs__information">
                 <h2 className="blogs__headline">Tools / Generators</h2>
                 <p className="blogs__text">
-                These generators can save you time and effort by providing ready-made design assets.
+                    These generators can save you time and effort by providing ready-made design assets.
                 </p>
-                <p className="blogs__warning">selected tools</p>
+                <ul className="blog__list">
+                    <li className="blog__item">
+                        <a href="" className="blog__link">Cheatsheets</a>
+                    </li>
+                    <li>—</li>
+                    <li className="blog__item">
+                        <a href="" className="blog__link">Videos</a>
+                    </li>
+                    <li>—</li>
+                    <li className="blog__item">
+                        <a href="" className="blog__link">Courses</a>
+                    </li>
+                    <li>—</li>
+                    <li className="blog__item">
+                        <a href="/blogs" className="blog__link">Blogs</a>
+                    </li>
+                </ul>
             </section>
             <section
                 className="blogs__carousel"
@@ -103,7 +119,7 @@ const Tools = () => {
             >
                 <div className="carousel__wrapper">
                     {toolItems.map((item, index) => (
-                        <div
+                        <a
                             className={`carousel ${[1, 3, 5].includes(index) ? 'carousel__special' : ''}`}
                             key={index}
                         >
@@ -115,7 +131,7 @@ const Tools = () => {
                             />
                             <h3 className="carousel__title">{item.title}</h3>
                             <p className="carousel__text">{item.text}</p>
-                        </div>
+                        </a>
                     ))}
                 </div>
             </section>

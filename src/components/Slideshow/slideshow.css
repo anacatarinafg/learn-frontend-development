@@ -20,7 +20,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 100px;
   flex-direction: column;
 }
 .slideshow .slideshow__information .slideshow__hello {
@@ -46,7 +46,7 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 2.5em;
+  padding: 5em;
 }
 .slideshow .slideshow__changeSlide .slideshow__slide {
   width: 10px;

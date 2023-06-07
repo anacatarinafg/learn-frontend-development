@@ -91,7 +91,23 @@ const Blogs = () => {
                 <p className="blogs__text">
                     Blogs with the most updated news about web development.
                 </p>
-                <p className="blogs__warning">selected blogs</p>
+                <ul className="blog__list">
+                    <li className="blog__item">
+                        <a href="" className="blog__link">Cheatsheets</a>
+                    </li>
+                    <li>—</li>
+                    <li className="blog__item">
+                        <a href="" className="blog__link">Videos</a>
+                    </li>
+                    <li>—</li>
+                    <li className="blog__item">
+                        <a href="" className="blog__link">Courses</a>
+                    </li>
+                    <li>—</li>
+                    <li className="blog__item">
+                        <a href="/tools" className="blog__link">Tools</a>
+                    </li>
+                </ul>
             </section>
             <section
                 className="blogs__carousel"
@@ -103,7 +119,7 @@ const Blogs = () => {
             >
                 <div className="carousel__wrapper">
                     {carouselItems.map((item, index) => (
-                        <div
+                        <a
                             className={`carousel ${[1, 3, 5].includes(index) ? 'carousel__special' : ''}`}
                             key={index}
                         >
@@ -115,7 +131,7 @@ const Blogs = () => {
                             />
                             <h3 className="carousel__title">{item.title}</h3>
                             <p className="carousel__text">{item.text}</p>
-                        </div>
+                        </a>
                     ))}
                 </div>
             </section>

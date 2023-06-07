@@ -53,6 +53,7 @@
       padding: 3.5em;
       border-right: 1px solid rgb(165, 165, 165);
       scroll-snap-align: start;
+      z-index: 2;
 
       .carousel__number {
         font-size: 72px;
@@ -161,5 +162,14 @@
         }
       }
     }
+  }
+}
+
+
+.blog__list {
+  display: flex;
+  gap: 3px;
+  .blog__item {
+    text-transform: uppercase;
   }
 }
