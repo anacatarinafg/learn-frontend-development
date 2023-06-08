@@ -93,15 +93,15 @@ const Tools = () => {
                 </p>
                 <ul className="blog__list">
                     <li className="blog__item">
-                        <a href="" className="blog__link">Cheatsheets</a>
+                        <a href="/cheatsheets" className="blog__link">Cheatsheets</a>
                     </li>
                     <li>—</li>
                     <li className="blog__item">
-                        <a href="" className="blog__link">Videos</a>
+                        <a href="/videos" className="blog__link">Videos</a>
                     </li>
                     <li>—</li>
                     <li className="blog__item">
-                        <a href="" className="blog__link">Courses</a>
+                        <a href="/courses" className="blog__link">Courses</a>
                     </li>
                     <li>—</li>
                     <li className="blog__item">

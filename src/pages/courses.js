@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import Courses from '../components/Courses/Courses';
 
 const courses = () => {
   return (
-    <div>courses</div>
+    <Courses />
   )
 }
 

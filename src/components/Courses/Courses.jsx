@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
-import './blogs.css';
+import '../Blogs/blogs.css';
 
-const Blogs = () => {
+const Courses = () => {
     const carouselRef = useRef(null);
     const [isDragging, setIsDragging] = useState(false);
     const [startX, setStartX] = useState(0);
@@ -24,7 +24,7 @@ const Blogs = () => {
     const handleMouseUp = () => {
         setIsDragging(false);
     };
-    const carouselItems = [
+    const coursesItems = [
         {
             number: '01',
             image:
@@ -101,11 +101,11 @@ const Blogs = () => {
                     </li>
                     <li>—</li>
                     <li className="blog__item">
-                        <a href="/courses" className="blog__link">Courses</a>
+                        <a href="/tools" className="blog__link">Tools</a>
                     </li>
                     <li>—</li>
                     <li className="blog__item">
-                        <a href="/tools" className="blog__link">Tools</a>
+                        <a href="/blogs" className="blog__link">Blogs</a>
                     </li>
                 </ul>
             </section>
@@ -118,7 +118,7 @@ const Blogs = () => {
                 ref={carouselRef}
             >
                 <div className="carousel__wrapper">
-                    {carouselItems.map((item, index) => (
+                    {coursesItems.map((item, index) => (
                         <a
                             className={`carousel ${[1, 3, 5].includes(index) ? 'carousel__special' : ''}`}
                             key={index}
@@ -139,7 +139,7 @@ const Blogs = () => {
     );
 };
 
-export default Blogs;
+export default Courses;
 
 
 
