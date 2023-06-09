@@ -28,58 +28,58 @@ const Courses = () => {
         {
             number: '01',
             image:
-                'https://play-lh.googleusercontent.com/hB9t3Z-mi284_49HA3nAuhO-W5Cyhje7r2P9McdgORoVCd-0SV54c12NMQWLHnqALw',
-            title: 'Medium',
+                '',
+            title: '',
             text:
-                'The mystical force behind web interactivity. It empowers you to create dynamic, responsive websites.',
+                '',
         },
         {
             number: '02',
             image:
-                'https://d2fltix0v2e0sb.cloudfront.net/dev-rainbow.png',
-            title: 'Dev',
+                '',
+            title: '',
             text:
-                'A community-driven platform for developers to share articles, ask questions, and connect with fellow programmers.',
+                '',
         },
         {
             number: '03',
             image:
-                'https://cdn-icons-png.flaticon.com/512/23/23324.png',
-            title: 'smashingmagazine',
+                '',
+            title: '',
             text:
-                'A popular web development blog that covers coding techniques, design trends, and industry best practices.',
+                '',
         },
         {
             number: '04',
             image:
-                'https://i0.wp.com/css-tricks.com/wp-content/uploads/2013/06/CSS-Tricks-star.png',
-            title: 'CSS Tricks',
+                '',
+            title: '',
             text:
-                'A comprehensive resource for CSS tutorials, articles, and discussions.',
+                ' ',
         },
         {
             number: '05',
             image:
-                'https://cdn-icons-png.flaticon.com/512/23/23310.png',
-            title: 'sitepoint',
+                '',
+            title: '',
             text:
-                'Offers a wide range of web development tutorials, articles, and resources on various programming languages and frameworks.',
+                '',
         },
         {
             number: '06',
             image:
-                'https://avatars.githubusercontent.com/u/2035942?s=280&v=4',
-            title: 'alistapart',
+                '',
+            title: '',
             text:
-                'Focuses on web design and development, providing in-depth articles and insights from industry experts.',
+                '',
         },
         {
             number: '07',
             image:
-                'https://companieslogo.com/img/orig/DOCN-6eec72eb.png?t=1660638083',
-            title: 'digitalocean',
+                '',
+            title: '',
             text:
-                'Offers tutorials, articles, and courses on web development, covering topics like JavaScript, frameworks, and back-end technologies.',
+                '',
         },
 
     ];
@@ -87,7 +87,7 @@ const Courses = () => {
     return (
         <article className="blogs">
             <section className="blogs__information">
-                <h2 className="blogs__headline">Blog/news</h2>
+                <h2 className="blogs__headline">Courses</h2>
                 <p className="blogs__text">
                     Blogs with the most updated news about web development.
                 </p>

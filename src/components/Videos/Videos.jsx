@@ -28,58 +28,58 @@ const Videos = () => {
         {
             number: '01',
             image:
-                'https://ph-files.imgix.net/5a9996e9-3602-4937-a7d2-dcbbf8e3c6d7.png?auto=format',
-            title: 'UIVerse',
+                '',
+            title: '',
             text:
-                'Open-Source UI elements for any project',
+                '',
         },
         {
             number: '02',
             image:
-                'https://uncut.wtf/assets/images/og_image.png',
-            title: 'Uncut',
+                '',
+            title: '',
             text:
-                'The mystical force behind web interactivity. It empowers you to create dynamic, responsive websites.',
+                '',
         },
         {
             number: '03',
             image:
-                'https://www.bookmarks.design/media/image/uigradients.jpg',
-            title: 'UI Gradients',
+                '',
+            title: '',
             text:
-                'Generates beautiful CSS gradients with ready-to-use code snippets.',
+                '',
         },
         {
             number: '04',
             image:
-                'https://pitdesigns.com/wp-content/uploads/2020/05/Neumorphism.-Io.jpg',
-            title: 'Neumorphism',
+                '',
+            title: '',
             text:
-                ' Helps you create neumorphic design elements with customizable colors and styles.',
+                ' ',
         },
         {
             number: '05',
             image:
                 '',
-            title: 'CSS Grid Generator',
+            title: '',
             text:
-                'Generates custom CSS grid layouts for responsive web designs.',
+                '',
         },
         {
             number: '06',
             image:
-                'https://logodownload.org/wp-content/uploads/2020/11/canva-logo-0.png',
-            title: 'Canva',
+                '',
+            title: '',
             text:
-                'A graphic design tool that provides templates, elements, and a drag-and-drop editor for creating various visuals.',
+                '',
         },
         {
             number: '07',
             image:
-                'https://res.cloudinary.com/practicaldev/image/fetch/s--8p7s7734--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://www.faviator.xyz/assets/logo.png',
-            title: 'Favicon',
+                '',
+            title: '',
             text:
-                ' Generates favicons in various sizes and formats from an uploaded image or an icon library.',
+                '',
         },
 
     ];
@@ -87,7 +87,7 @@ const Videos = () => {
     return (
         <article className="blogs">
             <section className="blogs__information">
-                <h2 className="blogs__headline">Tools / Generators</h2>
+                <h2 className="blogs__headline">Videos to learn</h2>
                 <p className="blogs__text">
                     These generators can save you time and effort by providing ready-made design assets.
                 </p>
@@ -97,11 +97,11 @@ const Videos = () => {
                     </li>
                     <li>—</li>
                     <li className="blog__item">
-                        <a href="/videos" className="blog__link">Videos</a>
+                        <a href="/courses" className="blog__link">Courses</a>
                     </li>
                     <li>—</li>
                     <li className="blog__item">
-                        <a href="/courses" className="blog__link">Courses</a>
+                        <a href="/tools" className="blog__link">Tools</a>
                     </li>
                     <li>—</li>
                     <li className="blog__item">
