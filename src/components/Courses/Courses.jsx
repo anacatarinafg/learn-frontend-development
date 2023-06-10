@@ -29,33 +29,33 @@ const Courses = () => {
             number: '01',
             image:
                 '',
-            title: '',
+            title: 'Intro to HTML/CSS: Making Webpages - Khan Academy',
             text:
-                '',
+                'Interactive course teaching HTML and CSS through hands-on projects.',
         },
         {
             number: '02',
             image:
                 '',
-            title: '',
+            title: 'Responsive Web Design Certification - freeCodeCamp.org',
             text:
-                '',
+                'Comprehensive web development curriculum with real-world projects.',
         },
         {
             number: '03',
             image:
                 '',
-            title: '',
+            title: 'Web Development Bootcamp - Colt Steele',
             text:
-                '',
+                'Comprehensive course covering HTML, CSS, JavaScript, and popular frameworks.',
         },
         {
             number: '04',
             image:
                 '',
-            title: '',
+            title: 'The Net Ninja Web Development Playlist - The Net Ninja',
             text:
-                ' ',
+                'Video series covering HTML, CSS, JavaScript, and popular frameworks.',
         },
         {
             number: '05',

@@ -56,6 +56,7 @@
 }
 .blogs .blogs__carousel .carousel .carousel__image {
   width: 300px;
+  height: 300px;
   align-self: flex-end;
 }
 .blogs .blogs__carousel .carousel .carousel__title {
@@ -138,6 +139,15 @@
   }
   .blogs .blogs__carousel .carousel .carousel__text {
     text-align: justify;
+  }
+  .blog__list {
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    justify-content: center;
+  }
+  .blog__list .blog__item {
+    text-transform: uppercase;
   }
 }
 .blog__list {

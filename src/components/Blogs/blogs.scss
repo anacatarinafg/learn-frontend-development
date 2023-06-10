@@ -63,6 +63,7 @@
 
       .carousel__image {
         width: 300px;
+        height: 300px;
         align-self: flex-end;
       }
 
@@ -161,6 +162,15 @@
           text-align: justify;
         }
       }
+    }
+  }
+  .blog__list {
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    justify-content: center;
+    .blog__item {
+      text-transform: uppercase;
     }
   }
 }

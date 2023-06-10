@@ -29,57 +29,56 @@ const Videos = () => {
             number: '01',
             image:
                 '',
-            title: '',
+            title: 'freeCodeCamp',
             text:
-                '',
+                'A nonprofit organization providing comprehensive web development tutorials and coding challenges for all skill levels.',
         },
         {
             number: '02',
-            image:
-                '',
-            title: '',
+            image: '',
+            title: 'CSS-Tricks',
             text:
-                '',
+                'Valuable tutorials, tips, and tricks related to CSS, front-end development, and modern web design.',
         },
         {
             number: '03',
             image:
                 '',
-            title: '',
+            title: 'Codecourse',
             text:
-                '',
+                'Tutorials covering web development, frameworks, databases, and deployment, with a focus on PHP and Laravel.',
         },
         {
             number: '04',
             image:
                 '',
-            title: '',
+            title: 'Codecademy',
             text:
-                ' ',
+                'Interactive coding tutorials for various programming languages and web development topics.',
         },
         {
             number: '05',
             image:
                 '',
-            title: '',
+            title: 'Kevin Powell',
             text:
-                '',
+                ' CSS-focused tutorials, including responsive design, layout techniques, and advanced CSS features.',
         },
         {
             number: '06',
             image:
                 '',
-            title: '',
+            title: 'Wes Bos',
             text:
-                '',
+                'High-quality tutorials on JavaScript, CSS, and modern web development techniques with a focus on practical projects.',
         },
         {
             number: '07',
             image:
                 '',
-            title: '',
+            title: 'The Net Ninja',
             text:
-                '',
+                'Beginner-friendly web development tutorials with a focus on JavaScript, front-end frameworks, and back-end technologies.',
         },
 
     ];
@@ -87,7 +86,7 @@ const Videos = () => {
     return (
         <article className="blogs">
             <section className="blogs__information">
-                <h2 className="blogs__headline">Videos to learn</h2>
+                <h2 className="blogs__headline">Videos</h2>
                 <p className="blogs__text">
                     These generators can save you time and effort by providing ready-made design assets.
                 </p>
