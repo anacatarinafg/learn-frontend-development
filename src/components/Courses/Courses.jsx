@@ -61,25 +61,25 @@ const Courses = () => {
             number: '05',
             image:
                 '',
-            title: '',
+            title: 'Web Development Fundamentals - Code.org',
             text:
-                '',
+                'Introduction to web development concepts and hands-on coding activities.',
         },
         {
             number: '06',
             image:
                 '',
-            title: '',
+            title: '"Web Development" - Microsoft Learn',
             text:
-                '',
+                'Microsofts web development resources covering HTML, CSS, and JavaScript',
         },
         {
             number: '07',
             image:
                 '',
-            title: '',
+            title: '"HTML, CSS, and JavaScript" - MDN Web Docs',
             text:
-                '',
+                'Extensive documentation and guides for web development technologies.',
         },
 
     ];
