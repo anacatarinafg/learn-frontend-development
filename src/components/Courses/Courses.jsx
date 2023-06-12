@@ -88,7 +88,7 @@ const Courses = () => {
         <article className="blogs">
             <section className="blogs__information">
                 <h2 className="blogs__headline">Courses</h2>
-                <p className="blogs__text">
+                <p className="blogs__text"> 
                     Blogs with the most updated news about web development.
                 </p>
                 <ul className="blog__list">
