@@ -28,7 +28,7 @@ const Courses = () => {
         {
             number: '01',
             image:
-                '',
+                'https://yt3.googleusercontent.com/ytc/AGIKgqN0nkI5567YBQWBMCJXdw3OBm5tPckJ03IDTZZ-=s900-c-k-c0x00ffffff-no-rj',
             title: 'Intro to HTML/CSS: Making Webpages - Khan Academy',
             text:
                 'Interactive course teaching HTML and CSS through hands-on projects.',
@@ -36,7 +36,7 @@ const Courses = () => {
         {
             number: '02',
             image:
-                '',
+                'https://leverageedu.com/blog/wp-content/uploads/2021/06/Why-Everyone-Should-Learn-to-Code.png',
             title: 'Responsive Web Design Certification - freeCodeCamp.org',
             text:
                 'Comprehensive web development curriculum with real-world projects.',
@@ -44,7 +44,7 @@ const Courses = () => {
         {
             number: '03',
             image:
-                '',
+                'https://www.mooc.org/hubfs/is-coding-for-me-jpg.jpeg',
             title: 'Web Development Bootcamp - Colt Steele',
             text:
                 'Comprehensive course covering HTML, CSS, JavaScript, and popular frameworks.',
@@ -52,7 +52,7 @@ const Courses = () => {
         {
             number: '04',
             image:
-                '',
+                'https://codecondo.com/wp-content/uploads/2017/01/Learn-to-Code.jpg',
             title: 'The Net Ninja Web Development Playlist - The Net Ninja',
             text:
                 'Video series covering HTML, CSS, JavaScript, and popular frameworks.',
@@ -60,28 +60,11 @@ const Courses = () => {
         {
             number: '05',
             image:
-                '',
+                'https://www.educative.io/v2api/editorpage/4778911335448576/image/6289910425190400',
             title: 'Web Development Fundamentals - Code.org',
             text:
                 'Introduction to web development concepts and hands-on coding activities.',
-        },
-        {
-            number: '06',
-            image:
-                '',
-            title: '"Web Development" - Microsoft Learn',
-            text:
-                'Microsofts web development resources covering HTML, CSS, and JavaScript',
-        },
-        {
-            number: '07',
-            image:
-                '',
-            title: '"HTML, CSS, and JavaScript" - MDN Web Docs',
-            text:
-                'Extensive documentation and guides for web development technologies.',
-        },
-
+        }
     ];
 
     return (

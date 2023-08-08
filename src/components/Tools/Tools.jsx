@@ -44,7 +44,7 @@ const Tools = () => {
         {
             number: '03',
             image:
-                'https://www.bookmarks.design/media/image/uigradients.jpg',
+                'https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190820175612/Why-You-Should-Learn-To-Code.png',
             title: 'UI Gradients',
             text:
                 'Generates beautiful CSS gradients with ready-to-use code snippets.',

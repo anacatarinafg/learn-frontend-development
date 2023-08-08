@@ -28,59 +28,11 @@ const Cheatsheets = () => {
         {
             number: '01',
             image:
-                '',
-            title: '',
+                'https://buildertrend.com/wp-content/uploads/2022/11/Create-Effective-Cost-Code-System_Thumbnail_11.10.png',
+            title: 'in construction',
             text:
                 '',
-        },
-        {
-            number: '02',
-            image:
-                '',
-            title: '',
-            text:
-                '',
-        },
-        {
-            number: '03',
-            image:
-                '',
-            title: '',
-            text:
-                '',
-        },
-        {
-            number: '04',
-            image:
-                '',
-            title: '',
-            text:
-                ' ',
-        },
-        {
-            number: '05',
-            image:
-                '',
-            title: '',
-            text:
-                '',
-        },
-        {
-            number: '06',
-            image:
-                '',
-            title: '',
-            text:
-                '',
-        },
-        {
-            number: '07',
-            image:
-                '',
-            title: '',
-            text:
-                '',
-        },
+        }
 
     ];
 

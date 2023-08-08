@@ -28,14 +28,14 @@ const Videos = () => {
         {
             number: '01',
             image:
-                '',
+                'https://images.squarespace-cdn.com/content/v1/5943b11db3db2be040e6fa54/1520249361434-NYJA17KB02FZVMOATWGJ/23054.jpg',
             title: 'freeCodeCamp',
             text:
                 'A nonprofit organization providing comprehensive web development tutorials and coding challenges for all skill levels.',
         },
         {
             number: '02',
-            image: '',
+            image: 'https://cdnp1.stackassets.com/2357113def29cb36fa9e9c0cea5f691bfec36022/store/43b0818566cbed779a4732d6cf8ef35465091be7d5af055b2c03075191da/sale_25313_primary_image_wide.jpg',
             title: 'CSS-Tricks',
             text:
                 'Valuable tutorials, tips, and tricks related to CSS, front-end development, and modern web design.',
@@ -43,7 +43,7 @@ const Videos = () => {
         {
             number: '03',
             image:
-                '',
+                'https://media.nature.com/lw767/magazine-assets/d41586-019-00653-5/d41586-019-00653-5_16459152.jpg',
             title: 'Codecourse',
             text:
                 'Tutorials covering web development, frameworks, databases, and deployment, with a focus on PHP and Laravel.',
@@ -51,35 +51,11 @@ const Videos = () => {
         {
             number: '04',
             image:
-                '',
+                'https://www.multidots.com/wp-content/uploads/2020/01/code-quality-standard.png?quality=90',
             title: 'Codecademy',
             text:
                 'Interactive coding tutorials for various programming languages and web development topics.',
-        },
-        {
-            number: '05',
-            image:
-                '',
-            title: 'Kevin Powell',
-            text:
-                ' CSS-focused tutorials, including responsive design, layout techniques, and advanced CSS features.',
-        },
-        {
-            number: '06',
-            image:
-                '',
-            title: 'Wes Bos',
-            text:
-                'High-quality tutorials on JavaScript, CSS, and modern web development techniques with a focus on practical projects.',
-        },
-        {
-            number: '07',
-            image:
-                '',
-            title: 'The Net Ninja',
-            text:
-                'Beginner-friendly web development tutorials with a focus on JavaScript, front-end frameworks, and back-end technologies.',
-        },
+        }
 
     ];
 
