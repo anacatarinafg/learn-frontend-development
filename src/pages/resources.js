@@ -6,7 +6,7 @@ const resources = () => {
     return (
         <>
             <Resources />
-            {/* DELETE THE CHEATSHEET */}
+            
         </>
     )
 }
