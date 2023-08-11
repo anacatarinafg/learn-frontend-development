@@ -4,6 +4,7 @@ import Cheatsheets from '../components/Cheatsheets/Cheatsheets';
 const cheatsheets = () => {
   return (
     <Cheatsheets />
+    // DELETING THIS
   )
 }
 
